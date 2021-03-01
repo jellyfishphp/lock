@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Jellyfish\Lock;
 
-interface LockFactoryInterface
+interface LockFacadeInterface
 {
     /**
      * @param array $identifierParts
@@ -12,5 +12,5 @@ interface LockFactoryInterface
      *
      * @return \Jellyfish\Lock\LockInterface
      */
-    public function create(array $identifierParts, float $ttl): LockInterface;
+    public function createLock(array $identifierParts, float $ttl): LockInterface;
 }
